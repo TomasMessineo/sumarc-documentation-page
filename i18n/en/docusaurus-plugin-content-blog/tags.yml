@@ -1,0 +1,14 @@
+versions:
+  label: Versions
+  permalink: /versions
+  description: SUMARC version history
+
+release:
+  label: Release
+  permalink: /release
+  description: News about new releases
+
+v1.0.0:
+  label: v1.0.0
+  permalink: /v1.0.0
+  description: SUMARC Version 1.0.0

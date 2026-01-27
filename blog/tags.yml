@@ -1,19 +1,14 @@
-facebook:
-  label: Facebook
-  permalink: /facebook
-  description: Facebook tag description
+versiones:
+  label: Versiones
+  permalink: /versiones
+  description: Historial de versiones de SUMARC
 
-hello:
-  label: Hello
-  permalink: /hello
-  description: Hello tag description
+lanzamiento:
+  label: Lanzamiento
+  permalink: /lanzamiento
+  description: Noticias sobre nuevos lanzamientos
 
-docusaurus:
-  label: Docusaurus
-  permalink: /docusaurus
-  description: Docusaurus tag description
-
-hola:
-  label: Hola
-  permalink: /hola
-  description: Hola tag description
+v1.0.0:
+  label: v1.0.0
+  permalink: /v1.0.0
+  description: Versión 1.0.0 de SUMARC

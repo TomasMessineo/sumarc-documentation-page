@@ -27,6 +27,9 @@ const config: Config = {
 
   onBrokenLinks: 'throw',
 
+  // Configuración para evitar problemas de rutas y 404 al cambiar de idioma
+  trailingSlash: false,
+
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
