@@ -25,7 +25,7 @@ const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <Translate id="feature.standards.description">
-        Trabaje con el estándar JATS XML para garantizar la interoperabilidad, preservación y calidad semántica de sus publicaciones académicas.
+        Trabajamos con el estándar JATS XML para garantizar la interoperabilidad, preservación y calidad semántica de sus publicaciones académicas.
       </Translate>
     ),
   },
