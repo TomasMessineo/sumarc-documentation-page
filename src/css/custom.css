@@ -1,0 +1,155 @@
+/**
+ * SUMARC Documentation Styling
+ * Theme: Deep Teal & Pastel Blue
+ */
+
+:root {
+  /* Primary Color: Deep Teal (#165159) */
+  --ifm-color-primary: #165159;
+  --ifm-color-primary-dark: #13464d;
+  --ifm-color-primary-darker: #124249;
+  --ifm-color-primary-darkest: #0f363c;
+  --ifm-color-primary-light: #1f6b76;
+  --ifm-color-primary-lighter: #237782;
+  --ifm-color-primary-lightest: #5dafb9;
+
+  /* Global Theme (Default) */
+  --ifm-font-color-base: #dcedf6;
+  /* Text in pastel blue */
+  --ifm-background-color: #0b2b30;
+  /* Dark teal background */
+
+  /* Global Navbar & Footer Colors */
+  --ifm-navbar-background-color: #165159;
+  /* Very dark teal */
+  --ifm-footer-background-color: #071b1e;
+  --ifm-footer-color: #dcedf6;
+
+  /* Accent Colors (Pastels based on request) */
+  --sumarc-pastel-blue: #dcedf6;
+  --sumarc-sky-blue: #8bcceb;
+
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(22, 81, 89, 0.1);
+
+  /* Navbar Styling */
+  --ifm-navbar-text-color: #ffffff;
+  --ifm-navbar-link-hover-color: #5dafb9;
+  --ifm-navbar-shadow: 0 2px 10px rgba(22, 81, 89, 0.1);
+  --ifm-navbar-height: 85px;
+  /* Increased height for larger logo */
+  --ifm-navbar-link-color: #ffffff;
+  /* Explicitly white for visibility */
+  --ifm-color-content-secondary: #ffffff;
+  /* Force secondary content */
+
+  /* Footer Styling */
+  --ifm-footer-link-color: #237782;
+  --ifm-footer-link-hover-color: #5dafb9;
+  --ifm-footer-title-color: #0f363c;
+}
+
+/* Compatibility Overrides */
+[data-theme='dark'] {
+  --ifm-color-primary: #5dafb9;
+  --ifm-color-primary-dark: #165159;
+  --ifm-color-primary-darker: #13464d;
+  --ifm-color-primary-darkest: #0f363c;
+  --ifm-color-primary-light: #237782;
+  --ifm-color-primary-lighter: #8bcceb;
+  --ifm-color-primary-lightest: #dcedf6;
+}
+
+/* Navbar Tweaks */
+.navbar__title {
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--ifm-color-primary);
+}
+
+/* Force specific navbar icons (like the sun/moon toggle) to be white */
+.navbar .clean-btn,
+.navbar__item {
+  color: #ffffff;
+}
+
+.navbar .clean-btn:hover,
+.navbar__item:hover {
+  color: var(--ifm-navbar-link-hover-color);
+}
+
+.navbar {
+  border-bottom: 3px solid #96BA39;
+  /* Pastel blue border */
+}
+
+/* Ensure logo scales with the increased navbar height */
+.navbar__logo {
+  height: 100%;
+}
+
+.navbar__logo img {
+  height: 70px;
+  /* Specific height to fill the new navbar size comfortably */
+}
+
+/* Hero Banner */
+.hero--primary {
+  /* Gradient from Deep Teal (#165159) to lighter accents */
+  background: linear-gradient(135deg, #165159 0%, #206873 100%);
+  color: #ffffff;
+}
+
+.hero__subtitle {
+  color: #dcedf6;
+  /* Pastel blue text */
+}
+
+/* Buttons */
+.button--primary {
+  background-color: #5dafb9;
+  border-color: #5dafb9;
+  color: #ffffff;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.button--primary:hover {
+  background-color: #8bcceb;
+  border-color: #8bcceb;
+  color: #165159;
+}
+
+.button--secondary {
+  background-color: #ffffff;
+  color: #165159;
+  border: 1px solid #ffffff;
+}
+
+/* Footer improvements */
+.footer__title {
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--ifm-color-primary);
+  border-bottom: 2px solid #8bcceb;
+  display: inline-block;
+  padding-bottom: 4px;
+  margin-bottom: 1rem;
+}
+
+.footer__link-item:hover {
+  color: var(--ifm-color-primary-lightest);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 996px) {
+  :root {
+    --ifm-navbar-height: 60px;
+    /* Smaller height for mobile */
+  }
+
+  .navbar__logo img {
+    height: 40px;
+    /* Smaller logo for mobile */
+  }
+}

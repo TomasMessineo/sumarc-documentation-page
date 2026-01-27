@@ -1,0 +1,18 @@
+{
+  "logo.alt": {
+    "message": "SUMARC",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.Documentación": {
+    "message": "Documentation",
+    "description": "Navbar item with label Documentación"
+  },
+  "item.label.Novedades": {
+    "message": "News",
+    "description": "Navbar item with label Novedades"
+  },
+  "item.label.GitHub SEDICI": {
+    "message": "GitHub SEDICI",
+    "description": "Navbar item with label GitHub SEDICI"
+  }
+}

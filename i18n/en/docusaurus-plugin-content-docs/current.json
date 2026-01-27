@@ -1,0 +1,14 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.Plugins de SUMARC": {
+    "message": "SUMARC Plugins",
+    "description": "The label for category 'Plugins de SUMARC' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Plugins de SUMARC.link.generated-index.description": {
+    "message": "Technical detail of each of the plugins that make up SUMARC.",
+    "description": "The generated-index page description for category 'Plugins de SUMARC' in sidebar 'tutorialSidebar'"
+  }
+}
