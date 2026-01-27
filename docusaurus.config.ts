@@ -90,7 +90,7 @@ const config: Config = {
           position: 'left',
           label: 'Documentación',
         },
-        { to: '/blog', label: 'Novedades', position: 'left' },
+        { to: '/blog', label: 'Versiones', position: 'left' },
         {
           type: 'localeDropdown',
           position: 'right',
@@ -143,7 +143,7 @@ const config: Config = {
           title: 'Comunidad',
           items: [
             {
-              label: 'Blog de Novedades',
+              label: 'Historial de Versiones',
               to: '/blog',
             },
             {

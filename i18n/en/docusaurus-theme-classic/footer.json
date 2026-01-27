@@ -35,9 +35,9 @@
     "message": "Contact",
     "description": "The label of footer link with label=Contacto linking to http://sedici.unlp.edu.ar/feedback"
   },
-  "link.item.label.Blog de Novedades": {
-    "message": "News Blog",
-    "description": "The label of footer link with label=Blog de Novedades linking to /blog"
+  "link.item.label.Historial de Versiones": {
+    "message": "Version History",
+    "description": "The label of footer link with label=Historial de Versiones linking to /blog"
   },
   "link.item.label.Facebook": {
     "message": "Facebook",

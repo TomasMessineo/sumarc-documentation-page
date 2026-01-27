@@ -1,6 +1,6 @@
 sumarc:
-  name: Equipo SUMARC
-  title: Administradores de SUMARC
+  name: SUMARC Team
+  title: SUMARC Administrators
   url: https://portalderevistas.unlp.edu.ar/sumarc/
   image_url: https://github.com/sedici.png
   page: true

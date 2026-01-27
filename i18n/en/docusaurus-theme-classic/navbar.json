@@ -7,9 +7,9 @@
     "message": "Documentation",
     "description": "Navbar item with label Documentación"
   },
-  "item.label.Novedades": {
-    "message": "News",
-    "description": "Navbar item with label Novedades"
+  "item.label.Versiones": {
+    "message": "Versions",
+    "description": "Navbar item with label Versiones"
   },
   "item.label.GitHub SEDICI": {
     "message": "GitHub SEDICI",
