@@ -8,7 +8,7 @@
   },
   "homepage.title": {
     "message": "SUMARC documentation",
-    "description": "The homepage title"
+    "description": "Documentation of SUMARC"
   },
   "homepage.tagline": {
     "message": "Markup system for scientific journals",

@@ -36,11 +36,6 @@ export default function Home(): ReactNode {
   const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
-      title={translate({
-        id: 'homepage.title',
-        message: 'Hello from {title}',
-        description: 'The homepage title',
-      }, { title: siteConfig.title })}
       description={translate({
         id: 'homepage.description',
         message: 'Description will go into a meta tag in <head />',
