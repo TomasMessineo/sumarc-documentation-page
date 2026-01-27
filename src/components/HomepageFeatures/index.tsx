@@ -6,7 +6,8 @@ import Translate from '@docusaurus/Translate';
 
 type FeatureItem = {
   title: ReactNode;
-  Svg: React.ComponentType<React.ComponentProps<'svg'>>;
+  Svg?: React.ComponentType<React.ComponentProps<'svg'>>;
+  image?: string;
   description: ReactNode;
 };
 
@@ -22,7 +23,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: <Translate id="feature.standards.title">Estándares Internacionales</Translate>,
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    image: require('@site/static/img/homepage-image1.png').default,
     description: (
       <Translate id="feature.standards.description">
         Trabajamos con el estándar JATS XML para garantizar la interoperabilidad, preservación y calidad semántica de sus publicaciones académicas.
@@ -40,11 +41,15 @@ const FeatureList: FeatureItem[] = [
   },
 ];
 
-function Feature({ title, Svg, description }: FeatureItem) {
+function Feature({ title, Svg, image, description }: FeatureItem) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+        {Svg ? (
+          <Svg className={styles.featureSvg} role="img" />
+        ) : (
+          <img src={image} className={styles.featureSvg} role="img" alt="Feature" />
+        )}
       </div>
       <div className="text--center padding-horiz--md">
         <Heading as="h3">{title}</Heading>
