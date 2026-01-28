@@ -147,6 +147,11 @@
   color: var(--ifm-color-primary-lightest);
 }
 
+.footer__copyright {
+  margin-top: 1.5rem;
+  /* Add spacing above copyright */
+}
+
 /* Responsive Adjustments */
 @media (max-width: 996px) {
   :root {
