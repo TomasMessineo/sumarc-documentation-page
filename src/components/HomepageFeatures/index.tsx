@@ -26,7 +26,7 @@ const FeatureList: FeatureItem[] = [
     image: require('@site/static/img/homepage-image1.png').default,
     description: (
       <Translate id="feature.standards.description">
-        Trabajamos con el estándar JATS XML para garantizar la interoperabilidad, preservación y calidad semántica de sus publicaciones académicas.
+        Trabaje con el estándar JATS XML para garantizar la interoperabilidad, preservación y calidad semántica de sus publicaciones académicas.
       </Translate>
     ),
   },

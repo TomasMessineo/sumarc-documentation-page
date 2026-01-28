@@ -10,5 +10,13 @@
   "sidebar.tutorialSidebar.category.Plugins de SUMARC.link.generated-index.description": {
     "message": "Technical detail of each of the plugins that make up SUMARC.",
     "description": "The generated-index page description for category 'Plugins de SUMARC' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Historial de Versiones": {
+    "message": "Version History",
+    "description": "The label for category 'Historial de Versiones' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Historial de Versiones.link.generated-index.description": {
+    "message": "Change history for the JATS Parser plugin.",
+    "description": "The generated-index page description for category 'Historial de Versiones' in sidebar 'tutorialSidebar'"
   }
 }
