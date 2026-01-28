@@ -1,0 +1,55 @@
+.aboutSection {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.statsContainer {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.statItem {
+    text-align: center;
+}
+
+.statValue {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--ifm-color-primary);
+}
+
+.statLabel {
+    font-size: 1rem;
+    color: var(--ifm-color-emphasis-600);
+}
+
+.ctaSection {
+    background: linear-gradient(135deg, var(--ifm-color-primary) 0%, var(--ifm-color-primary-dark) 100%);
+    padding: 4rem 0;
+    text-align: center;
+    color: white;
+}
+
+.ctaTitle {
+    color: white;
+    margin-bottom: 1.5rem;
+}
+
+.ctaButton {
+    border: 2px solid white;
+    color: white;
+    font-weight: bold;
+    padding: 0.8rem 2rem;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.ctaButton:hover {
+    background: white;
+    color: var(--ifm-color-primary);
+    text-decoration: none;
+}

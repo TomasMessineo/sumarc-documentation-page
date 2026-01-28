@@ -126,6 +126,12 @@
   border: 1px solid #ffffff;
 }
 
+.button--secondary:hover {
+  background-color: #165159;
+  color: #ffffff;
+  scale: 1.02;
+}
+
 /* Footer improvements */
 .footer__title {
   text-transform: uppercase;

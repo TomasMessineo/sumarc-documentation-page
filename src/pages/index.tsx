@@ -45,6 +45,9 @@ function HomepageHeader() {
   );
 }
 
+import HomepageWorkflow from '@site/src/components/HomepageWorkflow';
+import HomepageAbout from '@site/src/components/HomepageAbout';
+
 export default function Home(): ReactNode {
   const { siteConfig } = useDocusaurusContext();
   return (
@@ -57,6 +60,8 @@ export default function Home(): ReactNode {
       <HomepageHeader />
       <main>
         <HomepageFeatures />
+        <HomepageWorkflow />
+        <HomepageAbout />
       </main>
     </Layout>
   );

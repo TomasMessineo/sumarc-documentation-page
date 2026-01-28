@@ -21,19 +21,58 @@
     "message": "Comprehensive Workflow"
   },
   "feature.workflow.description": {
-    "message": "Manage the entire editorial process in a single platform, from DOCX manuscript submission to final PDF and HTML generation."
+    "message": "Streamline the entire article lifecycle within one ecosystem, automating DOCX conversion into formats ready for digital preservation and global distribution."
+  },
+  "homepage.workflow.title": {
+    "message": "How it works"
+  },
+  "homepage.workflow.step1.title": {
+    "message": "1. Import"
+  },
+  "homepage.workflow.step1.desc": {
+    "message": "Upload your DOCX file directly to the editorial workflow."
+  },
+  "homepage.workflow.step2.title": {
+    "message": "2. Processing"
+  },
+  "homepage.workflow.step2.desc": {
+    "message": "Automatically convert your DOCX file to JATS XML format."
+  },
+  "homepage.workflow.step3.title": {
+    "message": "3. Editing"
+  },
+  "homepage.workflow.step3.desc": {
+    "message": "Edit your JATS XML file visually using an intuitive interface."
+  },
+  "homepage.workflow.step4.title": {
+    "message": "4. Publication"
+  },
+  "homepage.workflow.step4.desc": {
+    "message": "Generate different output formats: PDF and HTML. Adapt your JATS XML to be supported by SciELO."
+  },
+  "homepage.about.title": {
+    "message": "Developed by SEDICI"
+  },
+  "homepage.about.desc": {
+    "message": "SUMARC is a project headed by the National University of La Plata’s Intellectual Creation Dissemination Service."
+  },
+  "homepage.stats.opensource": {
+    "message": "Open Source"
+  },
+  "homepage.stats.journals": {
+    "message": "Journals using it"
   },
   "feature.standards.title": {
     "message": "International Standards"
   },
   "feature.standards.description": {
-    "message": "We work with the JATS XML standard to ensure interoperability, preservation, and semantic quality of your academic publications."
+    "message": "Ensure global interoperability through the JATS XML standard, guaranteeing a robust semantic structure for indexing in international databases and repositories."
   },
   "feature.plugins.title": {
     "message": "Specialized Plugins"
   },
   "feature.plugins.description": {
-    "message": "Use powerful tools like Texture for visual editing, automatic Converters, and embedded metadata enrichers."
+    "message": "Optimize editing with cutting-edge tools: visual editing via Texture, automated metadata enrichment, and intelligent bibliographic reference validation."
   },
   "theme.ErrorPageContent.title": {
     "message": "This page crashed.",

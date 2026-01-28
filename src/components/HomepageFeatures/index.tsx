@@ -17,7 +17,7 @@ const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <Translate id="feature.workflow.description">
-        Gestione todo el proceso editorial en una sola plataforma, desde la recepción del manuscrito DOCX hasta la generación de PDF y HTML finales.
+        Gestione el ciclo de vida del artículo desde un único ecosistema, automatizando la transformación de manuscritos DOCX a formatos de preservación y difusión digital.
       </Translate>
     ),
   },
@@ -26,7 +26,7 @@ const FeatureList: FeatureItem[] = [
     image: require('@site/static/img/homepage-image1.png').default,
     description: (
       <Translate id="feature.standards.description">
-        Trabaje con el estándar JATS XML para garantizar la interoperabilidad, preservación y calidad semántica de sus publicaciones académicas.
+        Asegure la interoperabilidad global mediante el estándar JATS XML, garantizando una estructura semántica robusta para la indexación en bases de datos y repositorios internacionales.
       </Translate>
     ),
   },
@@ -35,7 +35,7 @@ const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <Translate id="feature.plugins.description">
-        Utilice herramientas potentes como Texture para edición visual, Converters automáticos y enriquecedores de metadatos integrados.
+        Optimice la edición con herramientas de vanguardia: edición visual del XML JATS, enriquecimiento automático de metadatos y validación inteligente de referencias bibliográficas.
       </Translate>
     ),
   },
