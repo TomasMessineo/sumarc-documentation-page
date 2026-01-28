@@ -10,6 +10,9 @@
     "message": "SUMARC documentation",
     "description": "Documentation of SUMARC"
   },
+  "homepage.cta": {
+    "message": "Read documentation"
+  },
   "homepage.tagline": {
     "message": "Markup system for scientific journals",
     "description": "The homepage tagline"

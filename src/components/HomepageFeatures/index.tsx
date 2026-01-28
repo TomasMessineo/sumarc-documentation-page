@@ -41,9 +41,17 @@ const FeatureList: FeatureItem[] = [
   },
 ];
 
-function Feature({ title, Svg, image, description }: FeatureItem) {
+import { motion } from 'framer-motion';
+
+function Feature({ title, Svg, image, description, index }: FeatureItem & { index: number }) {
   return (
-    <div className={clsx('col col--4')}>
+    <motion.div
+      className={clsx('col col--4')}
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: index * 0.2 }}
+      viewport={{ once: true }}
+    >
       <div className="text--center">
         {Svg ? (
           <Svg className={styles.featureSvg} role="img" />
@@ -55,7 +63,7 @@ function Feature({ title, Svg, image, description }: FeatureItem) {
         <Heading as="h3">{title}</Heading>
         <p>{description}</p>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
@@ -65,7 +73,7 @@ export default function HomepageFeatures(): ReactNode {
       <div className="container">
         <div className="row">
           {FeatureList.map((props, idx) => (
-            <Feature key={idx} {...props} />
+            <Feature key={idx} {...props} index={idx} />
           ))}
         </div>
       </div>
