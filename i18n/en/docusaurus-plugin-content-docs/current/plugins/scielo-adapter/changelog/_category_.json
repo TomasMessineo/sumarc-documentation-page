@@ -1,0 +1,8 @@
+{
+    "label": "Version History",
+    "position": 5,
+    "link": {
+        "type": "generated-index",
+        "description": "Change history for scieloAdapter."
+    }
+}

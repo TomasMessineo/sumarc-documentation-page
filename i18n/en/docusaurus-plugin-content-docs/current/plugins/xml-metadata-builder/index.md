@@ -1,35 +1,66 @@
 # XMLMetadataBuilder
 
-**XMLMetadataBuilder** is a generic plugin for OJS 3.4 designed to automate the enrichment of JATS XML files by injecting accurate bibliographic and editorial metadata extracted directly from the OJS system.
+**XMLMetadataBuilder** is a plugin developed for **Open Journal Systems (OJS)** with the purpose of enriching and completing the metadata of **JATS XML** files within the editorial workflow.
+
+In the context of digital scientific production, the quality of an article is not defined solely by its textual content, but also by the quantity and precision of its metadata. These constitute the basis for indexing, interoperability, preservation, and evaluation of academic production.
 
 :::info Source
 Development repository:
 [View repository on GitHub](https://github.com/san-fernandez/pruebaPluginMetadata)
 :::
 
-## Main Function
-The main objective of the plugin is to take a "raw" JATS XML file (which may contain only the body of the text) and populate it with all the necessary information in the `<front>` section to comply with the **JATS Publishing DTD 1.4** standard.
+## Integration in the Editorial Workflow
 
-This eliminates the need to manually upload redundant metadata into the XML, ensuring that the file information matches exactly what is recorded in OJS.
+The plugin is activated specifically in the **Production** phase of the OJS editorial workflow, once the article has passed the review and copyediting stages.
+
+![XMLMetadataBuilder Process](/img/process-xmlmetadatabuilder.jpg)
+
+1.  The editor selects an XML file marked as *production-ready* from the "XML Enricher" tab.
+2.  The system allows previewing the metadata that will be injected.
+3.  Enrichment is executed before generating final galley proofs (PDF, HTML), ensuring metadata is complete from the source.
+
+## System Architecture
+
+The plugin adopts a modular layered architecture, designed to decouple data extraction from XML construction.
+
+![XMLMetadataBuilder Architecture](/img/arquitectura-xmlmetadatabuilder.png)
+
+The system is structured into four central components:
+
+### 1. MetadataExtractor
+Responsible for **extracting and normalizing** all relevant metadata from the OJS database (authors, affiliations, dates, licenses). Acts as a bridge abstracting the complexity of OJS, producing a homogeneous data structure for processing.
+
+### 2. JATSBuilder
+Transforms normalized metadata into a valid XML structure compliant with the **JATS Publishing Schema** standard.
+*   Builds the complete `<front>` element.
+*   Ensures compatibility with strict profiles like **SciELO**.
+*   Guarantees the correct order of elements and attributes.
+
+### 3. XMLMetadataProcessor
+Orchestrates the enrichment process operating on the original XML document via a DOM tree.
+*   Coordinates extraction and construction.
+*   Replaces the existing `<front>` section with the enriched version.
+*   **Preserves intact** the body (`<body>`) and references (`<back>`) of the original document.
+
+### 4. EnrichmentService
+Entry point from the OJS user interface.
+*   Manages file reading and writing.
+*   Persists changes in the system.
+*   Handles creation of galley proofs and dependent files.
+
+## Impact on Interoperability
+
+Adopting this enrichment system brings direct benefits for editorial quality:
+
+*   **Reduction of validation errors**: Generated XMLs present significantly fewer errors in validators like SciELO's.
+*   **Standards compliance**: Alignment with **JATS4R** (JATS for Reuse) recommendations.
+*   **Digital Preservation**: By completing structural metadata (dates, licenses, identifiers), it ensures the article is interpretable in the long term.
+*   **Technological Sovereignty**: Being natively integrated into SUMARC, it avoids dependence on external tools ("black boxes") for metadata curation.
 
 ## Key Features
 
-*   **Automatic Extraction:** Gets data directly from OJS objects (`Submission`, `Publication`, `Context`), including:
-    *   **Journal:** Title, eISSN, publisher.
-    *   **Article:** Title, abstract, keywords, DOIs, publication dates.
-    *   **Authors:** Names, affiliations, ORCIDs, email, contribution roles.
-    *   **License:** Information de copyrights and Creative Commons licenses.
-*   **Preview:** Allows visualizing how the `<front>` block of the XML will look before applying final changes.
-*   **File Management:** Creates a new enriched file (e.g., `article-enriched.xml`) without validating the original, and can automatically publish it as a galley.
-*   **Modular Architecture:** Clearly separates extraction logic (`MetadataExtractor`) from XML construction (`JATSBuilder`), facilitating maintenance.
+*   **Automatic Extraction:** Obtains data directly from OJS objects (`Submission`, `Publication`, `Context`).
+*   **Preview:** Allows visualizing changes before applying them.
+*   **File Management:** Creates enriched versions without destroying the original (optional) and facilitates its publication as a galley.
 
-## Workflow
-1.  In the **Production** stage, the editor selects an existing XML file.
-2.  Accesses the enrichment tool provided by the plugin.
-3.  The system generates a preview of the injected metadata.
-4.  Upon confirmation, the new enriched XML file is generated and saved in the system.
 
-## Technical Components
-*   **MetadataExtractor:** Class responsible for mapping data from the OJS database to intermediate data structures.
-*   **JATSBuilder:** Uses `DOMDocument` to manipulate the XML and build the correct JATS tag structure.
-*   **EnrichmentService:** Service that coordinates file reading, processing, and result saving.
