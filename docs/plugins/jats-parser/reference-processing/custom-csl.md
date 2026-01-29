@@ -2,7 +2,7 @@
 sidebar_position: 3
 ---
 
-# Estilo Personalizado (APA)
+# 3. Estilo Personalizado (APA)
 
 Aunque existen repositorios con miles de estilos CSL (como el [repositorio oficial](https://github.com/citation-style-language/styles)), en JATS Parser utilizamos una versión **personalizada de APA** para satisfacer necesidades editoriales específicas que la implementación estándar no cubre.
 

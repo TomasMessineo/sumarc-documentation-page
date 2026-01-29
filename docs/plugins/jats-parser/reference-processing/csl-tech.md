@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# Información sobre CSL
+# 2. Información sobre CSL
 
 **CSL (Citation Style Language)** es un lenguaje abierto basado en XML que describe el formato de citas y bibliografías. Es el estándar de facto utilizado por gestores de referencias modernos como Zotero, Mendeley y Papers.
 

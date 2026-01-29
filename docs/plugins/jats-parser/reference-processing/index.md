@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Procesamiento de Referencias
+# 1. Procesamiento de Referencias
 
 JATS Parser integra la librería **CiteProc-PHP** para la generación automatizada de referencias bibliográficas y citas en el documento final (PDF/HTML).
 
