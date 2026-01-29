@@ -35,6 +35,14 @@
     "message": "Change history for scieloAdapter.",
     "description": "The description for category 'Historial de Versiones' of scielo-adapter"
   },
+  "sidebar.tutorialSidebar.category.docx-converter-changelog": {
+    "message": "Version History",
+    "description": "The label for category 'Historial de Versiones' of DocxConverter"
+  },
+  "sidebar.tutorialSidebar.category.docx-converter-changelog.link.generated-index.description": {
+    "message": "DocxConverter change history.",
+    "description": "The description for category 'Historial de Versiones' of DocxConverter"
+  },
   "sidebar.tutorialSidebar.category.Sistema de Citas (CSL)": {
     "message": "Citation System (CSL)",
     "description": "The label for category 'Sistema de Citas (CSL)' in sidebar 'tutorialSidebar'"
