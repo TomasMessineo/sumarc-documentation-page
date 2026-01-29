@@ -1,6 +1,6 @@
 # DocxConverter
 
-**DocxConverter** is an OJS 3 plugin that allows converting Microsoft Word documents (`.docx`) to the JATS XML standard.
+**DocxConverter** is an OJS 3 plugin (versions 3.3 and 3.4) that allows converting Microsoft Word documents (`.docx`) to the JATS XML standard.
 
 :::info Source
 This plugin is maintained by SEDICI and is based on the original work by Vitaliy-1.

@@ -25,7 +25,7 @@ As this is the initial version, we include the system's base features:
 ### Main Features
 The system integrates three fundamental plugins for the editorial workflow:
 
--   **[DocxConverter v1.0](/docs/plugins/docx-converter/changelog#100):** Converts Microsoft Word documents (`.docx`) to the JATS XML standard, automating the creation of the base structure for semantic marking.
+-   **[DocxConverter v1.0](/docs/plugins/docx-converter/changelog/1.0):** Converts Microsoft Word documents (`.docx`) to the JATS XML standard, automating the creation of the base structure for semantic marking.
 -   **[Texture v1.0](/docs/plugins/texture/changelog/1.0):** Visual WYSIWYG editor that allows correcting and refining the semantic content of the JATS XML article without the need to edit code manually.
 -   **[JatsParser v1.0](/docs/plugins/jats-parser/changelog/1.0):** Galley generation engine that transforms JATS XML files into final publication formats like PDF and visually rich HTML.
 
