@@ -33,14 +33,14 @@
   --docusaurus-highlighted-code-line-bg: rgba(22, 81, 89, 0.1);
 
   /* Navbar Styling */
-  --ifm-navbar-text-color: #ffffff;
+  --ifm-navbar-text-color: #96BA39;
   --ifm-navbar-link-hover-color: #5dafb9;
   --ifm-navbar-shadow: 0 2px 10px rgba(22, 81, 89, 0.1);
   --ifm-navbar-height: 85px;
   /* Increased height for larger logo */
-  --ifm-navbar-link-color: #ffffff;
+  --ifm-navbar-link-color: #96BA39;
   /* Explicitly white for visibility */
-  --ifm-color-content-secondary: #ffffff;
+  --ifm-color-content-secondary: #96BA39;
   /* Force secondary content */
 
   /* Footer Styling */
