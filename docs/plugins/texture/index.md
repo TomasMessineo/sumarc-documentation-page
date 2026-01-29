@@ -40,7 +40,3 @@ Para que las imágenes se visualicen en Texture:
 
 ## Guía Avanzada
 Para desarrolladores que necesiten extender las funcionalidades de Texture (agregar nuevos campos, roles, etc.), consultar la [Guía de Modificación](modification-guide.md).
-
-## Historial de Versiones
-- [Versión 1.1](changelog/1.1.md) - Versión Extendida (Actual)
-- [Versión 1.0](changelog/1.0.md) - Versión Base (Stock)

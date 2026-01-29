@@ -40,7 +40,3 @@ For images to be visualized in Texture:
 
 ## Advanced Guide
 For developers who need to extend Texture functionalities (add new fields, roles, etc.), see the [Modification Guide](modification-guide.md).
-
-## Version History
-- [Version 1.1](changelog/1.1.md) - Extended Version (Current)
-- [Version 1.0](changelog/1.0.md) - Base Version (Stock)
