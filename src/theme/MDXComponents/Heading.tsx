@@ -101,18 +101,43 @@ function LastUpdatedInfoInner() {
      
      if (!lastUpdatedAt && !lastUpdatedBy) return null;
 
-     const historyUrl = editUrl?.replace('/tree/', '/commits/');
-     // Format date based on locale? using built in docusaurus formatter is better but let's stick to simple JS
-     const date = lastUpdatedAt ? new Intl.DateTimeFormat('es-ES', { day: 'numeric', month: 'long', year: 'numeric' }).format(new Date(lastUpdatedAt)) : '';
+    // Transform editUrl to local history link
+    // EditUrl example: https://github.com/TomasMessineo/sumarc-documentation-page/tree/main/docs/intro.md
+    // We want: /history?file=docs/intro.md
+    // BUT, editUrl contains the full URL. We need to extract the path relative to repo root.
+    // Assuming editUrl ends with "${path}". We can use the known repo URL to strip it.
+    
+    let historyUrl = null;
+    if (editUrl) {
+       // Simple extraction hack: Split by 'main/' or 'master/' or repo name
+       // Or better: pass the relative path if available in metadata? metadata doesn't contain simple relative path usually, it has source.
+       // The 'useDoc' metadata returns 'source' usually like "@site/docs/intro.md".
+       // Let's use metadata.source if available. 
+       // Docusaurus metadata: source: "@site/docs/plugins/jats-parser/reference-processing/date-processing.md"
+       
+       // Clean "@site/" alias
+       // @ts-ignore
+       const source = metadata.source || "";
+       if (source.startsWith('@site/')) {
+           const relativePath = source.replace('@site/', '');
+           historyUrl = `/history?file=${relativePath}`;
+       }
+    }
 
-     return (
-       <div style={{margin: '0 0 20px 0', fontSize: '0.9em', color: 'var(--ifm-color-emphasis-600)'}}>
-         <Link to={historyUrl} title="Ver historial de cambios" style={{display:'inline-flex', alignItems:'center', gap:'5px', color:'inherit', textDecoration:'none', borderBottom:'1px dashed currentColor'}}>
+    const date = lastUpdatedAt ? new Intl.DateTimeFormat('es-ES', { day: 'numeric', month: 'long', year: 'numeric' }).format(new Date(lastUpdatedAt)) : '';
+
+    return (
+      <div style={{margin: '0 0 20px 0', fontSize: '0.9em', color: 'var(--ifm-color-emphasis-600)'}}>
+        {historyUrl ? (
+          <Link to={historyUrl} title="Ver historial de cambios" style={{display:'inline-flex', alignItems:'center', gap:'5px', color:'inherit', textDecoration:'none', borderBottom:'1px dashed currentColor'}}>
              <span>📅 {date}</span>
              {lastUpdatedBy && <span>👤 {lastUpdatedBy}</span>}
-             <span>🕒 Ver Historial</span>
-         </Link>
-       </div>
+             <span>🕒 Ver Historial de Cambios</span>
+          </Link>
+        ) : (
+            <span>Unknown File Path</span>
+        )}
+      </div>
     );
 }
 
