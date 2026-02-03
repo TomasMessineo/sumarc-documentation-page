@@ -18,4 +18,12 @@ SUMARC integrates several specialized plugins that work together to offer a comp
 *   **Enrichment:** Improvement of XML metadata with **XMLMetadataBuilder**.
 *   **Adaptation:** Compatibility with specific standards such as those of SciELO.
 
+## Key Benefits
+
+Using SUMARC provides significant advantages for editorial teams:
+
+*   **Interoperability:** Ensures documents comply with international digital preservation standards.
+*   **Efficiency:** Automates repetitive formatting and conversion tasks, reducing publication time.
+*   **Accessibility:** Facilitates the generation of accessible formats like HTML and structured PDF.
+
 In this documentation, we will explore each of these components in detail and how they interact with each other.

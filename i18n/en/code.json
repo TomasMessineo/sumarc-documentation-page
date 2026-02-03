@@ -1,4 +1,34 @@
 {
+  "history.title": { "message": "Version History" },
+  "history.noFile": { "message": "No file specified." },
+  "history.backToDocs": { "message": "Back to documentation" },
+  "history.tooltip.selectTwo": { "message": "Select exactly 2 versions to compare" },
+  "history.tooltip.compare": { "message": "Compare versions" },
+  "history.button.compare": { "message": "Compare selected versions" },
+  "history.description.prefix": { "message": "Change history for file:" },
+  "history.description.suffix": { "message": "Select two versions to view differences." },
+  "history.table.version": { "message": "Version" },
+  "history.table.date": { "message": "Date" },
+  "history.table.author": { "message": "Author" },
+  "history.table.comments": { "message": "Comments" },
+  "history.version.current": { "message": "CURRENT" },
+  "history.backToList": { "message": "Back to version list" },
+  "history.compare.title": { "message": "Change Comparison" },
+  "history.compare.label": { "message": "Compare:" },
+  "history.compare.base": { "message": "Base (Old)" },
+  "history.compare.target": { "message": "Target (New)" },
+  "history.loadingDiff": { "message": "Loading differences..." },
+  "history.noChanges": { "message": "No changes:" },
+  "history.noChangesMsg": { "message": "The content of the selected versions is identical." },
+  "history.pageTitle": { "message": "Page History" },
+  "history.pageDescription": { "message": "Change history" },
+  "history.loading": { "message": "Loading history..." },
+  "history.token.msg1": { "message": "GitHub API has a rate limit of 60 requests/hour for anonymous users." },
+  "history.token.msg2": { "message": "If you see 'Rate Limit' errors, enter a Personal Access Token (Classic). It stays valid in your browser only." },
+  "history.token.generate": { "message": "Generate one at" },
+  "history.token.scopes": { "message": "No special scopes required for public repositories." },
+  "theme.lastUpdated.viewHistoryTitle": { "message": "View change history" },
+  "theme.lastUpdated.viewHistoryText": { "message": "View Change History" },
   "homepage.visitDocs": {
     "message": "Go to Documentation"
   },
@@ -7,15 +37,13 @@
     "description": "Homepage description"
   },
   "homepage.title": {
-    "message": "SUMARC documentation",
-    "description": "Documentation of SUMARC"
+    "message": "SUMARC documentation"
   },
   "homepage.cta": {
     "message": "Read documentation"
   },
   "homepage.tagline": {
-    "message": "Markup system for scientific journals",
-    "description": "The homepage tagline"
+    "message": "Markup system for scientific journals"
   },
   "feature.workflow.title": {
     "message": "Comprehensive Workflow"
@@ -400,5 +428,83 @@
   "theme.tags.tagsPageTitle": {
     "message": "Tags",
     "description": "The title of the tag list page"
+  },
+  "history.title": {
+    "message": "Version History"
+  },
+  "history.noFile": {
+    "message": "No file specified."
+  },
+  "history.backToDocs": {
+    "message": "Back to documentation"
+  },
+  "history.tooltip.selectTwo": {
+    "message": "Select exactly 2 versions to compare"
+  },
+  "history.tooltip.compare": {
+    "message": "Compare versions"
+  },
+  "history.button.compare": {
+    "message": "Compare selected versions"
+  },
+  "history.description.prefix": {
+    "message": "Change history for file:"
+  },
+  "history.description.suffix": {
+    "message": "Select two versions to view differences."
+  },
+  "history.table.version": {
+    "message": "Version"
+  },
+  "history.table.date": {
+    "message": "Date"
+  },
+  "history.table.author": {
+    "message": "Author"
+  },
+  "history.table.comments": {
+    "message": "Comments"
+  },
+  "history.version.current": {
+    "message": "CURRENT"
+  },
+  "history.backToList": {
+    "message": "Back to version list"
+  },
+  "history.compare.title": {
+    "message": "Change Comparison"
+  },
+  "history.compare.label": {
+    "message": "Compare:"
+  },
+  "history.compare.base": {
+    "message": "Base (Old)"
+  },
+  "history.compare.target": {
+    "message": "Target (New)"
+  },
+  "history.loadingDiff": {
+    "message": "Loading differences..."
+  },
+  "history.noChanges": {
+    "message": "No changes:"
+  },
+  "history.noChangesMsg": {
+    "message": "The content of the selected versions is identical."
+  },
+  "history.pageTitle": {
+    "message": "Page History"
+  },
+  "history.pageDescription": {
+    "message": "Change history"
+  },
+  "history.loading": {
+    "message": "Loading history..."
+  },
+  "theme.lastUpdated.viewHistoryTitle": {
+    "message": "View change history"
+  },
+  "theme.lastUpdated.viewHistoryText": {
+    "message": "View Change History"
   }
 }

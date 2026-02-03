@@ -95,44 +95,49 @@ function LastUpdatedInfoSafe() {
     return <LastUpdatedInfoInner />;
 }
 
+import Translate, {translate} from '@docusaurus/Translate';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+
+// LastUpdatedInfoInner is the actual component used
 function LastUpdatedInfoInner() {
      const {metadata} = useDoc();
      const {lastUpdatedAt, lastUpdatedBy, editUrl} = metadata;
+     const {i18n: {currentLocale}} = useDocusaurusContext();
      
      if (!lastUpdatedAt && !lastUpdatedBy) return null;
 
     // Transform editUrl to local history link
-    // EditUrl example: https://github.com/TomasMessineo/sumarc-documentation-page/tree/main/docs/intro.md
-    // We want: /history?file=docs/intro.md
-    // BUT, editUrl contains the full URL. We need to extract the path relative to repo root.
-    // Assuming editUrl ends with "${path}". We can use the known repo URL to strip it.
+    // ... logic omitted ...
     
     let historyUrl = null;
     if (editUrl) {
-       // Simple extraction hack: Split by 'main/' or 'master/' or repo name
-       // Or better: pass the relative path if available in metadata? metadata doesn't contain simple relative path usually, it has source.
-       // The 'useDoc' metadata returns 'source' usually like "@site/docs/intro.md".
-       // Let's use metadata.source if available. 
-       // Docusaurus metadata: source: "@site/docs/plugins/jats-parser/reference-processing/date-processing.md"
-       
-       // Clean "@site/" alias
        // @ts-ignore
        const source = metadata.source || "";
        if (source.startsWith('@site/')) {
-           const relativePath = source.replace('@site/', '');
+           let relativePath = source.replace('@site/', '');
+           
+           // If we are in english (or non-default locale) AND the source points to original docs,
+           // we should try to point to the localized file.
+           // However, Docusaurus usually sets 'source' to the actual localized file if it exists.
+           // If source is still pointing to docs/..., it might be a fallback? 
+           // In this specific case, let's force the i18n path if currentLocale is 'en' and path is 'docs/'
+           if (currentLocale === 'en' && relativePath.startsWith('docs/')) {
+              relativePath = relativePath.replace('docs/', 'i18n/en/docusaurus-plugin-content-docs/current/');
+           }
+
            historyUrl = `/history?file=${relativePath}`;
        }
     }
 
-    const date = lastUpdatedAt ? new Intl.DateTimeFormat('es-ES', { day: 'numeric', month: 'long', year: 'numeric' }).format(new Date(lastUpdatedAt)) : '';
+    const date = lastUpdatedAt ? new Intl.DateTimeFormat(currentLocale, { day: 'numeric', month: 'long', year: 'numeric' }).format(new Date(lastUpdatedAt)) : '';
 
     return (
       <div style={{margin: '0 0 20px 0', fontSize: '0.9em', color: 'var(--ifm-color-emphasis-600)'}}>
         {historyUrl ? (
-          <Link to={historyUrl} title="Ver historial de cambios" style={{display:'inline-flex', alignItems:'center', gap:'5px', color:'inherit', textDecoration:'none', borderBottom:'1px dashed currentColor'}}>
+          <Link to={historyUrl} title={translate({message: "Ver historial de cambios", id: "theme.lastUpdated.viewHistoryTitle"})} style={{display:'inline-flex', alignItems:'center', gap:'5px', color:'inherit', textDecoration:'none', borderBottom:'1px dashed currentColor'}}>
              <span>📅 {date}</span>
              {lastUpdatedBy && <span>👤 {lastUpdatedBy}</span>}
-             <span>🕒 Ver Historial de Cambios</span>
+             <span>🕒 <Translate id="theme.lastUpdated.viewHistoryText">Ver Historial de Cambios</Translate></span>
           </Link>
         ) : (
             <span>Unknown File Path</span>

@@ -21,27 +21,27 @@
   },
   "sidebar.tutorialSidebar.category.xml-metadata-builder-changelog": {
     "message": "Version History",
-    "description": "The label for category 'Historial de Versiones' of XMLMetadataBuilder"
+    "description": "The label for category 'Historial de Versiones' in sidebar 'tutorialSidebar'"
   },
   "sidebar.tutorialSidebar.category.xml-metadata-builder-changelog.link.generated-index.description": {
     "message": "Change history for XMLMetadataBuilder.",
-    "description": "The description for category 'Historial de Versiones' of XMLMetadataBuilder"
+    "description": "The generated-index page description for category 'Historial de Versiones' in sidebar 'tutorialSidebar'"
   },
   "sidebar.tutorialSidebar.category.scielo-adapter-changelog": {
     "message": "Version History",
-    "description": "The label for category 'Historial de Versiones' of scielo-adapter"
+    "description": "The label for category 'Historial de Versiones' in sidebar 'tutorialSidebar'"
   },
   "sidebar.tutorialSidebar.category.scielo-adapter-changelog.link.generated-index.description": {
     "message": "Change history for scieloAdapter.",
-    "description": "The description for category 'Historial de Versiones' of scielo-adapter"
+    "description": "The generated-index page description for category 'Historial de Versiones' in sidebar 'tutorialSidebar'"
   },
   "sidebar.tutorialSidebar.category.docx-converter-changelog": {
     "message": "Version History",
-    "description": "The label for category 'Historial de Versiones' of DocxConverter"
+    "description": "The label for category 'Historial de Versiones' in sidebar 'tutorialSidebar'"
   },
   "sidebar.tutorialSidebar.category.docx-converter-changelog.link.generated-index.description": {
     "message": "DocxConverter change history.",
-    "description": "The description for category 'Historial de Versiones' of DocxConverter"
+    "description": "The generated-index page description for category 'Historial de Versiones' in sidebar 'tutorialSidebar'"
   },
   "sidebar.tutorialSidebar.category.Sistema de Citas (CSL)": {
     "message": "Citation System (CSL)",
@@ -54,5 +54,33 @@
   "sidebar.tutorialSidebar.category.Historial de versiones": {
     "message": "Version History",
     "description": "The label for category 'Historial de versiones' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.DocxConverter": {
+    "message": "DocxConverter",
+    "description": "The label for category 'DocxConverter' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Technical Architecture": {
+    "message": "Technical Architecture",
+    "description": "The label for category 'Technical Architecture' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.JATSParser": {
+    "message": "JATSParser",
+    "description": "The label for category 'JATSParser' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.scieloAdapter": {
+    "message": "scieloAdapter",
+    "description": "The label for category 'scieloAdapter' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Texture": {
+    "message": "Texture",
+    "description": "The label for category 'Texture' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Historial de versiones.link.generated-index.description": {
+    "message": "Historial de cambios de Texture.",
+    "description": "The generated-index page description for category 'Historial de versiones' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.XMLMetadataBuilder": {
+    "message": "XMLMetadataBuilder",
+    "description": "The label for category 'XMLMetadataBuilder' in sidebar 'tutorialSidebar'"
   }
 }
