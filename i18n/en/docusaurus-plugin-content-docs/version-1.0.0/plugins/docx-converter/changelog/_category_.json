@@ -1,0 +1,9 @@
+{
+    "label": "Version History",
+    "position": 5,
+    "link": {
+        "type": "generated-index",
+        "description": "DocxConverter change history."
+    },
+    "key": "docx-converter-changelog"
+}

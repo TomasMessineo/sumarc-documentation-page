@@ -1,0 +1,9 @@
+{
+    "label": "SUMARC Plugins",
+    "position": 3,
+    "link": {
+        "type": "generated-index",
+        "description": "Technical detail of each of the plugins that make up SUMARC.",
+        "slug": "plugins"
+    }
+}

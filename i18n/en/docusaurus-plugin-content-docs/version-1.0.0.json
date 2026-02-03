@@ -1,0 +1,58 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.Plugins de SUMARC": {
+    "message": "SUMARC Plugins",
+    "description": "The label for category 'Plugins de SUMARC' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Plugins de SUMARC.link.generated-index.description": {
+    "message": "Technical detail of each of the plugins that make up SUMARC.",
+    "description": "The generated-index page description for category 'Plugins de SUMARC' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Historial de Versiones": {
+    "message": "Version History",
+    "description": "The label for category 'Historial de Versiones' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Historial de Versiones.link.generated-index.description": {
+    "message": "Change history for the JATS Parser plugin.",
+    "description": "The generated-index page description for category 'Historial de Versiones' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.xml-metadata-builder-changelog": {
+    "message": "Version History",
+    "description": "The label for category 'Historial de Versiones' of XMLMetadataBuilder"
+  },
+  "sidebar.tutorialSidebar.category.xml-metadata-builder-changelog.link.generated-index.description": {
+    "message": "Change history for XMLMetadataBuilder.",
+    "description": "The description for category 'Historial de Versiones' of XMLMetadataBuilder"
+  },
+  "sidebar.tutorialSidebar.category.scielo-adapter-changelog": {
+    "message": "Version History",
+    "description": "The label for category 'Historial de Versiones' of scielo-adapter"
+  },
+  "sidebar.tutorialSidebar.category.scielo-adapter-changelog.link.generated-index.description": {
+    "message": "Change history for scieloAdapter.",
+    "description": "The description for category 'Historial de Versiones' of scielo-adapter"
+  },
+  "sidebar.tutorialSidebar.category.docx-converter-changelog": {
+    "message": "Version History",
+    "description": "The label for category 'Historial de Versiones' of DocxConverter"
+  },
+  "sidebar.tutorialSidebar.category.docx-converter-changelog.link.generated-index.description": {
+    "message": "DocxConverter change history.",
+    "description": "The description for category 'Historial de Versiones' of DocxConverter"
+  },
+  "sidebar.tutorialSidebar.category.Sistema de Citas (CSL)": {
+    "message": "Citation System (CSL)",
+    "description": "The label for category 'Sistema de Citas (CSL)' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Sistema de Citas (CSL).link.generated-index.description": {
+    "message": "Technical guide on reference generation, CiteProc, and CSL standards.",
+    "description": "The generated-index page description for category 'Sistema de Citas (CSL)' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Historial de versiones": {
+    "message": "Version History",
+    "description": "The label for category 'Historial de versiones' in sidebar 'tutorialSidebar'"
+  }
+}

@@ -1,0 +1,8 @@
+{
+    "label": "Sistema de Citas (CSL)",
+    "position": 5,
+    "link": {
+        "type": "generated-index",
+        "description": "Guía técnica sobre la generación de referencias, CiteProc y estándares CSL."
+    }
+}
