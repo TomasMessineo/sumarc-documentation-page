@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Layout from '@theme/Layout';
 import { useLocation, useHistory } from '@docusaurus/router';
-import ReactDiffViewer, { DiffMethod } from 'react-diff-viewer-continued';
+import { diffWordsWithSpace } from 'diff';
 import Link from '@docusaurus/Link';
 import {useColorMode} from '@docusaurus/theme-common';
 import BrowserOnly from '@docusaurus/BrowserOnly';
@@ -21,6 +21,52 @@ type Commit = {
     message: string;
   };
   html_url: string;
+};
+
+
+// Helper component for Prose Diff
+const ProseDiff = ({ oldText, newText }: { oldText: string, newText: string }) => {
+    // Basic Diff
+    const diff = diffWordsWithSpace(oldText || '', newText || '');
+
+    return (
+        <div style={{ 
+            whiteSpace: 'pre-wrap', 
+            lineHeight: '1.8', 
+            fontFamily: 'var(--ifm-font-family-base)',
+            color: 'var(--ifm-font-color-base)'
+        }}>
+            {diff.map((part, index) => {
+                // Styles for Added/Removed
+                const isAdded = part.added;
+                const isRemoved = part.removed;
+                
+                if (isRemoved) {
+                     return (
+                         <span key={index} style={{
+                             backgroundColor: 'rgba(255, 0, 0, 0.1)', 
+                             color: 'var(--ifm-color-danger)', 
+                             textDecoration: 'line-through',
+                             padding: '2px 0'
+                         }}>{part.value}</span>
+                     );
+                }
+                
+                if (isAdded) {
+                     return (
+                         <span key={index} style={{
+                             backgroundColor: 'rgba(0, 255, 0, 0.1)', 
+                             color: 'var(--ifm-color-success)', 
+                             fontWeight: 'bold',
+                             padding: '2px 0'
+                         }}>{part.value}</span>
+                     );
+                }
+                
+                return <span key={index}>{part.value}</span>;
+            })}
+        </div>
+    );
 };
 
 // Internal component that contains the client-side logic
@@ -83,8 +129,9 @@ function HistoryContent() {
       setError(null);
       try {
         const cleanPath = filePath?.startsWith('/') ? filePath.slice(1) : filePath;
-        // Fetch from dev branch
-        const response = await fetch(`https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/commits?sha=dev&path=${cleanPath}`);
+        // Fetch from dev branch with cache busting (query param only to avoid CORS preflight issues)
+        const timestamp = new Date().getTime();
+        const response = await fetch(`https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/commits?sha=dev&path=${cleanPath}&t=${timestamp}`);
         if (!response.ok) {
            if (response.status === 403) throw new Error("Rate limit exceeded. Please try again later.");
            if (response.status === 404) throw new Error("File history not found (404). Check if file exists in main branch.");
@@ -265,12 +312,12 @@ function HistoryContent() {
             </div>
         ) : (
             <div style={{
-                fontSize:'14px', 
+                fontSize:'16px', 
                 fontFamily: 'var(--ifm-font-family-base)',
                 boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
                 background: 'var(--ifm-background-surface-color)',
                 borderRadius: '8px',
-                padding: '20px',
+                padding: '40px',
                 border: '1px solid var(--ifm-color-emphasis-200)'
             }}>
                 {newContent === oldContent && oldContent !== '' && (
@@ -279,54 +326,7 @@ function HistoryContent() {
                     </div>
                 )}
 
-                <ReactDiffViewer 
-                    oldValue={oldContent} 
-                    newValue={newContent} 
-                    splitView={false} 
-                    hideLineNumbers={true}
-                    compareMethod={DiffMethod.WORDS}
-                    useDarkTheme={isDark}
-                    styles={{
-                        variables: {
-                            light: {
-                                addedBackground: '#e6ffec',
-                                addedColor: '#1d1e20',
-                                removedBackground: '#ffebe9',
-                                removedColor: '#1d1e20',
-                                wordAddedBackground: '#acf2bd',
-                                wordRemovedBackground: '#fdb8c0',
-                                diffViewerBackground: 'transparent',
-                                gutterBackground: 'transparent',
-                            },
-                            dark: {
-                                addedBackground: 'rgba(46, 160, 67, 0.3)', 
-                                addedColor: '#e6edf3', 
-                                removedBackground: 'rgba(248, 81, 73, 0.3)', 
-                                removedColor: '#e6edf3',
-                                wordAddedBackground: 'rgba(46, 160, 67, 0.6)',
-                                wordRemovedBackground: 'rgba(248, 81, 73, 0.6)',
-                                diffViewerBackground: 'transparent',
-                                gutterBackground: 'transparent',
-                            }
-                        },
-                        diffContainer: {
-                            border: 'none',
-                        },
-                        line: {
-                            padding: '4px 8px',
-                            lineHeight: '1.6',
-                            borderRadius: '4px',
-                            margin: '2px 0'
-                        },
-                        marker: {
-                            display: 'none',
-                        },
-                        contentText: {
-                            fontFamily: 'inherit',
-                            whiteSpace: 'pre-wrap'
-                        }
-                    }}
-                />
+                <ProseDiff oldText={oldContent} newText={newContent} />
             </div>
         )}
       </div>
